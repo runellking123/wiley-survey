@@ -1,0 +1,1682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Division of Business and Finance Assessment Survey | Wiley University</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --wildcat-purple: #3D2C68;
+            --wiley-purple: #65538F;
+            --gray: #595959;
+            --carbon: #414042;
+            --silver: #B1B6C1;
+            --light-stone: #E2E2E2;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--carbon);
+            background-color: #f5f5f5;
+        }
+
+        /* Header */
+        .header {
+            background-color: var(--wildcat-purple);
+            color: var(--white);
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 42px;
+            font-weight: 300;
+            letter-spacing: 8px;
+            margin-bottom: 5px;
+        }
+
+        .logo-university {
+            font-size: 14px;
+            letter-spacing: 12px;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        .header-divider {
+            width: 100px;
+            height: 3px;
+            background-color: var(--wiley-purple);
+            margin: 20px auto;
+        }
+
+        .survey-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .survey-subtitle {
+            font-size: 16px;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Introduction Section */
+        .intro-section {
+            background-color: var(--white);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--wiley-purple);
+        }
+
+        .intro-section h2 {
+            color: var(--wildcat-purple);
+            font-size: 22px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .intro-section p {
+            color: var(--gray);
+            margin-bottom: 15px;
+        }
+
+        .intro-section ul {
+            margin-left: 20px;
+            color: var(--gray);
+        }
+
+        .intro-section li {
+            margin-bottom: 8px;
+        }
+
+        /* Form Sections */
+        .form-section {
+            background-color: var(--white);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .section-header {
+            background-color: var(--wildcat-purple);
+            color: var(--white);
+            margin: -30px -30px 25px -30px;
+            padding: 20px 30px;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .section-header h2 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .section-header p {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-top: 5px;
+            font-weight: 300;
+        }
+
+        /* Form Groups */
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            color: var(--carbon);
+            margin-bottom: 10px;
+        }
+
+        .required::after {
+            content: " *";
+            color: #c0392b;
+        }
+
+        /* Input Styles */
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--silver);
+            border-radius: 5px;
+            font-family: 'Open Sans', Arial, sans-serif;
+            font-size: 15px;
+            color: var(--carbon);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="date"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--wiley-purple);
+            box-shadow: 0 0 0 3px rgba(101, 83, 143, 0.15);
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        /* Radio and Checkbox Groups */
+        .rating-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .rating-option {
+            flex: 1;
+            min-width: 80px;
+        }
+
+        .rating-option input[type="radio"] {
+            display: none;
+        }
+
+        .rating-option label {
+            display: block;
+            padding: 12px 8px;
+            text-align: center;
+            border: 2px solid var(--silver);
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 400;
+            transition: all 0.3s;
+        }
+
+        .rating-option input[type="radio"]:checked + label {
+            background-color: var(--wiley-purple);
+            border-color: var(--wiley-purple);
+            color: var(--white);
+        }
+
+        .rating-option label:hover {
+            border-color: var(--wiley-purple);
+        }
+
+        /* Checkbox Styles */
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 12px;
+        }
+
+        .checkbox-option {
+            display: flex;
+            align-items: center;
+        }
+
+        .checkbox-option input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+            accent-color: var(--wiley-purple);
+        }
+
+        .checkbox-option label {
+            font-weight: 400;
+            margin-bottom: 0;
+            cursor: pointer;
+        }
+
+        /* Department Selection */
+        .department-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .department-card {
+            position: relative;
+        }
+
+        .department-card input[type="checkbox"] {
+            display: none;
+        }
+
+        .department-card label {
+            display: block;
+            padding: 20px 15px;
+            border: 2px solid var(--light-stone);
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .department-card input[type="checkbox"]:checked + label {
+            border-color: var(--wiley-purple);
+            background-color: rgba(101, 83, 143, 0.1);
+        }
+
+        .department-card label:hover {
+            border-color: var(--wiley-purple);
+        }
+
+        /* Question Box */
+        .question-box {
+            background-color: var(--light-stone);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        .question-box p {
+            font-weight: 500;
+            color: var(--carbon);
+            margin-bottom: 15px;
+        }
+
+        /* Likert Scale */
+        .likert-scale {
+            overflow-x: auto;
+        }
+
+        .likert-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .likert-table th {
+            background-color: var(--wildcat-purple);
+            color: var(--white);
+            padding: 12px 8px;
+            font-size: 12px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .likert-table th:first-child {
+            text-align: left;
+            width: 40%;
+        }
+
+        .likert-table td {
+            padding: 15px 8px;
+            border-bottom: 1px solid var(--light-stone);
+            text-align: center;
+        }
+
+        .likert-table td:first-child {
+            text-align: left;
+            font-size: 14px;
+        }
+
+        .likert-table tr:hover {
+            background-color: rgba(101, 83, 143, 0.05);
+        }
+
+        .likert-table input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--wiley-purple);
+        }
+
+        /* Department Section */
+        .dept-section {
+            border: 1px solid var(--light-stone);
+            border-radius: 8px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .dept-header {
+            background-color: var(--wiley-purple);
+            color: var(--white);
+            padding: 15px 20px;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .dept-content {
+            padding: 20px;
+        }
+
+        /* Submit Button */
+        .submit-section {
+            text-align: center;
+            padding: 30px;
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .submit-btn {
+            background-color: var(--wildcat-purple);
+            color: var(--white);
+            padding: 15px 60px;
+            font-size: 18px;
+            font-weight: 600;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            font-family: 'Open Sans', Arial, sans-serif;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--wiley-purple);
+            transform: translateY(-2px);
+        }
+
+        .submit-note {
+            margin-top: 15px;
+            font-size: 14px;
+            color: var(--gray);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--wildcat-purple);
+            color: var(--white);
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .footer p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .footer .tagline {
+            font-size: 18px;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        /* Progress Indicator */
+        .progress-bar {
+            background-color: var(--light-stone);
+            height: 6px;
+            border-radius: 3px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background-color: var(--wiley-purple);
+            height: 100%;
+            width: 0%;
+            transition: width 0.3s;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 32px;
+                letter-spacing: 4px;
+            }
+
+            .survey-title {
+                font-size: 22px;
+            }
+
+            .rating-group {
+                flex-direction: column;
+            }
+
+            .rating-option {
+                min-width: 100%;
+            }
+
+            .department-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .likert-table th,
+            .likert-table td {
+                padding: 10px 4px;
+                font-size: 11px;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .header {
+                background-color: var(--wildcat-purple) !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .submit-section {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">WILEY</div>
+            <div class="logo-university">University</div>
+            <div class="header-divider"></div>
+            <h1 class="survey-title">Division of Business and Finance</h1>
+            <p class="survey-subtitle">Employee Assessment Survey</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <!-- Introduction -->
+        <section class="intro-section">
+            <h2>Welcome to the Assessment Survey</h2>
+            <p>The Division of Business and Finance is committed to providing excellent service to the Wiley University community. Your feedback is essential in helping us evaluate our performance and identify areas for improvement.</p>
+            <p>This survey covers the following departments:</p>
+            <ul>
+                <li>Auxiliary Services</li>
+                <li>Business Office</li>
+                <li>Facilities Management</li>
+                <li>Financial Aid</li>
+                <li>Information Technology</li>
+                <li>Risk Management</li>
+                <li>Student Accounts</li>
+                <li>Transportation &amp; Fleet Management</li>
+            </ul>
+            <p><strong>Estimated completion time:</strong> 15-20 minutes</p>
+            <p><strong>Note:</strong> All responses are confidential and will be used solely for assessment purposes.</p>
+        </section>
+
+        <form id="assessmentSurvey">
+            <!-- Section 1: Respondent Information -->
+            <section class="form-section">
+                <div class="section-header">
+                    <h2>Section 1: Respondent Information</h2>
+                    <p>Please provide your background information</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="employeeRole" class="required">Your Role at Wiley University</label>
+                    <select id="employeeRole" name="employeeRole" required>
+                        <option value="">-- Select your role --</option>
+                        <option value="faculty">Faculty</option>
+                        <option value="staff">Staff</option>
+                        <option value="administrator">Administrator</option>
+                        <option value="student-worker">Student Worker</option>
+                        <option value="contractor">Contractor</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="department" class="required">Your Department/Division</label>
+                    <input type="text" id="department" name="department" placeholder="Enter your department name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="yearsEmployed" class="required">Years of Employment at Wiley University</label>
+                    <select id="yearsEmployed" name="yearsEmployed" required>
+                        <option value="">-- Select range --</option>
+                        <option value="less-than-1">Less than 1 year</option>
+                        <option value="1-3">1-3 years</option>
+                        <option value="4-6">4-6 years</option>
+                        <option value="7-10">7-10 years</option>
+                        <option value="more-than-10">More than 10 years</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="surveyDate">Date of Survey Completion</label>
+                    <input type="date" id="surveyDate" name="surveyDate">
+                </div>
+            </section>
+
+            <!-- Section 2: Department Selection -->
+            <section class="form-section">
+                <div class="section-header">
+                    <h2>Section 2: Department Selection</h2>
+                    <p>Select the departments you have interacted with in the past 12 months</p>
+                </div>
+
+                <div class="form-group">
+                    <label class="required">Please select all departments you have had interactions with:</label>
+                    <div class="department-grid">
+                        <div class="department-card">
+                            <input type="checkbox" id="dept-auxiliary" name="departments" value="auxiliary">
+                            <label for="dept-auxiliary">Auxiliary Services</label>
+                        </div>
+                        <div class="department-card">
+                            <input type="checkbox" id="dept-business" name="departments" value="business">
+                            <label for="dept-business">Business Office</label>
+                        </div>
+                        <div class="department-card">
+                            <input type="checkbox" id="dept-facilities" name="departments" value="facilities">
+                            <label for="dept-facilities">Facilities Management</label>
+                        </div>
+                        <div class="department-card">
+                            <input type="checkbox" id="dept-financial" name="departments" value="financial">
+                            <label for="dept-financial">Financial Aid</label>
+                        </div>
+                        <div class="department-card">
+                            <input type="checkbox" id="dept-it" name="departments" value="it">
+                            <label for="dept-it">Information Technology</label>
+                        </div>
+                        <div class="department-card">
+                            <input type="checkbox" id="dept-risk" name="departments" value="risk">
+                            <label for="dept-risk">Risk Management</label>
+                        </div>
+                        <div class="department-card">
+                            <input type="checkbox" id="dept-student" name="departments" value="student">
+                            <label for="dept-student">Student Accounts</label>
+                        </div>
+                        <div class="department-card">
+                            <input type="checkbox" id="dept-transport" name="departments" value="transport">
+                            <label for="dept-transport">Transportation &amp; Fleet Management</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="interactionFrequency">How frequently do you interact with Business and Finance departments?</label>
+                    <select id="interactionFrequency" name="interactionFrequency">
+                        <option value="">-- Select frequency --</option>
+                        <option value="daily">Daily</option>
+                        <option value="weekly">Weekly</option>
+                        <option value="monthly">Monthly</option>
+                        <option value="quarterly">Quarterly</option>
+                        <option value="annually">Annually or less</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- Section 3: Auxiliary Services -->
+            <section class="form-section">
+                <div class="section-header">
+                    <h2>Section 3: Auxiliary Services Assessment</h2>
+                    <p>Evaluate services including dining, bookstore, mail services, and other auxiliary operations</p>
+                </div>
+
+                <div class="likert-scale">
+                    <p><strong>Please rate Auxiliary Services on the following criteria:</strong></p>
+                    <table class="likert-table">
+                        <thead>
+                            <tr>
+                                <th>Statement</th>
+                                <th>Strongly Disagree</th>
+                                <th>Disagree</th>
+                                <th>Neutral</th>
+                                <th>Agree</th>
+                                <th>Strongly Agree</th>
+                                <th>N/A</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Staff members are courteous and professional</td>
+                                <td><input type="radio" name="aux_courtesy" value="1"></td>
+                                <td><input type="radio" name="aux_courtesy" value="2"></td>
+                                <td><input type="radio" name="aux_courtesy" value="3"></td>
+                                <td><input type="radio" name="aux_courtesy" value="4"></td>
+                                <td><input type="radio" name="aux_courtesy" value="5"></td>
+                                <td><input type="radio" name="aux_courtesy" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Services are provided in a timely manner</td>
+                                <td><input type="radio" name="aux_timeliness" value="1"></td>
+                                <td><input type="radio" name="aux_timeliness" value="2"></td>
+                                <td><input type="radio" name="aux_timeliness" value="3"></td>
+                                <td><input type="radio" name="aux_timeliness" value="4"></td>
+                                <td><input type="radio" name="aux_timeliness" value="5"></td>
+                                <td><input type="radio" name="aux_timeliness" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Quality of services meets my expectations</td>
+                                <td><input type="radio" name="aux_quality" value="1"></td>
+                                <td><input type="radio" name="aux_quality" value="2"></td>
+                                <td><input type="radio" name="aux_quality" value="3"></td>
+                                <td><input type="radio" name="aux_quality" value="4"></td>
+                                <td><input type="radio" name="aux_quality" value="5"></td>
+                                <td><input type="radio" name="aux_quality" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Communication about services is clear and effective</td>
+                                <td><input type="radio" name="aux_communication" value="1"></td>
+                                <td><input type="radio" name="aux_communication" value="2"></td>
+                                <td><input type="radio" name="aux_communication" value="3"></td>
+                                <td><input type="radio" name="aux_communication" value="4"></td>
+                                <td><input type="radio" name="aux_communication" value="5"></td>
+                                <td><input type="radio" name="aux_communication" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Issues and concerns are resolved satisfactorily</td>
+                                <td><input type="radio" name="aux_resolution" value="1"></td>
+                                <td><input type="radio" name="aux_resolution" value="2"></td>
+                                <td><input type="radio" name="aux_resolution" value="3"></td>
+                                <td><input type="radio" name="aux_resolution" value="4"></td>
+                                <td><input type="radio" name="aux_resolution" value="5"></td>
+                                <td><input type="radio" name="aux_resolution" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Operating hours are convenient</td>
+                                <td><input type="radio" name="aux_hours" value="1"></td>
+                                <td><input type="radio" name="aux_hours" value="2"></td>
+                                <td><input type="radio" name="aux_hours" value="3"></td>
+                                <td><input type="radio" name="aux_hours" value="4"></td>
+                                <td><input type="radio" name="aux_hours" value="5"></td>
+                                <td><input type="radio" name="aux_hours" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Pricing is fair and reasonable</td>
+                                <td><input type="radio" name="aux_pricing" value="1"></td>
+                                <td><input type="radio" name="aux_pricing" value="2"></td>
+                                <td><input type="radio" name="aux_pricing" value="3"></td>
+                                <td><input type="radio" name="aux_pricing" value="4"></td>
+                                <td><input type="radio" name="aux_pricing" value="5"></td>
+                                <td><input type="radio" name="aux_pricing" value="na"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="form-group" style="margin-top: 25px;">
+                    <label for="aux_comments">Additional comments or suggestions for Auxiliary Services:</label>
+                    <textarea id="aux_comments" name="aux_comments" placeholder="Please share any specific feedback, concerns, or suggestions..."></textarea>
+                </div>
+            </section>
+
+            <!-- Section 4: Business Office -->
+            <section class="form-section">
+                <div class="section-header">
+                    <h2>Section 4: Business Office Assessment</h2>
+                    <p>Evaluate accounts payable, purchasing, budget management, and financial reporting services</p>
+                </div>
+
+                <div class="likert-scale">
+                    <p><strong>Please rate the Business Office on the following criteria:</strong></p>
+                    <table class="likert-table">
+                        <thead>
+                            <tr>
+                                <th>Statement</th>
+                                <th>Strongly Disagree</th>
+                                <th>Disagree</th>
+                                <th>Neutral</th>
+                                <th>Agree</th>
+                                <th>Strongly Agree</th>
+                                <th>N/A</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Staff members are knowledgeable and helpful</td>
+                                <td><input type="radio" name="bus_knowledge" value="1"></td>
+                                <td><input type="radio" name="bus_knowledge" value="2"></td>
+                                <td><input type="radio" name="bus_knowledge" value="3"></td>
+                                <td><input type="radio" name="bus_knowledge" value="4"></td>
+                                <td><input type="radio" name="bus_knowledge" value="5"></td>
+                                <td><input type="radio" name="bus_knowledge" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Purchase orders are processed efficiently</td>
+                                <td><input type="radio" name="bus_po" value="1"></td>
+                                <td><input type="radio" name="bus_po" value="2"></td>
+                                <td><input type="radio" name="bus_po" value="3"></td>
+                                <td><input type="radio" name="bus_po" value="4"></td>
+                                <td><input type="radio" name="bus_po" value="5"></td>
+                                <td><input type="radio" name="bus_po" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Reimbursements are processed in a timely manner</td>
+                                <td><input type="radio" name="bus_reimburse" value="1"></td>
+                                <td><input type="radio" name="bus_reimburse" value="2"></td>
+                                <td><input type="radio" name="bus_reimburse" value="3"></td>
+                                <td><input type="radio" name="bus_reimburse" value="4"></td>
+                                <td><input type="radio" name="bus_reimburse" value="5"></td>
+                                <td><input type="radio" name="bus_reimburse" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Financial policies and procedures are clearly communicated</td>
+                                <td><input type="radio" name="bus_policies" value="1"></td>
+                                <td><input type="radio" name="bus_policies" value="2"></td>
+                                <td><input type="radio" name="bus_policies" value="3"></td>
+                                <td><input type="radio" name="bus_policies" value="4"></td>
+                                <td><input type="radio" name="bus_policies" value="5"></td>
+                                <td><input type="radio" name="bus_policies" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Budget information is accurate and accessible</td>
+                                <td><input type="radio" name="bus_budget" value="1"></td>
+                                <td><input type="radio" name="bus_budget" value="2"></td>
+                                <td><input type="radio" name="bus_budget" value="3"></td>
+                                <td><input type="radio" name="bus_budget" value="4"></td>
+                                <td><input type="radio" name="bus_budget" value="5"></td>
+                                <td><input type="radio" name="bus_budget" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Training on financial systems is adequate</td>
+                                <td><input type="radio" name="bus_training" value="1"></td>
+                                <td><input type="radio" name="bus_training" value="2"></td>
+                                <td><input type="radio" name="bus_training" value="3"></td>
+                                <td><input type="radio" name="bus_training" value="4"></td>
+                                <td><input type="radio" name="bus_training" value="5"></td>
+                                <td><input type="radio" name="bus_training" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Vendor payments are processed accurately</td>
+                                <td><input type="radio" name="bus_vendor" value="1"></td>
+                                <td><input type="radio" name="bus_vendor" value="2"></td>
+                                <td><input type="radio" name="bus_vendor" value="3"></td>
+                                <td><input type="radio" name="bus_vendor" value="4"></td>
+                                <td><input type="radio" name="bus_vendor" value="5"></td>
+                                <td><input type="radio" name="bus_vendor" value="na"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="form-group" style="margin-top: 25px;">
+                    <label for="bus_comments">Additional comments or suggestions for the Business Office:</label>
+                    <textarea id="bus_comments" name="bus_comments" placeholder="Please share any specific feedback, concerns, or suggestions..."></textarea>
+                </div>
+            </section>
+
+            <!-- Section 5: Facilities Management -->
+            <section class="form-section">
+                <div class="section-header">
+                    <h2>Section 5: Facilities Management Assessment</h2>
+                    <p>Evaluate building maintenance, grounds keeping, custodial services, and space management</p>
+                </div>
+
+                <div class="likert-scale">
+                    <p><strong>Please rate Facilities Management on the following criteria:</strong></p>
+                    <table class="likert-table">
+                        <thead>
+                            <tr>
+                                <th>Statement</th>
+                                <th>Strongly Disagree</th>
+                                <th>Disagree</th>
+                                <th>Neutral</th>
+                                <th>Agree</th>
+                                <th>Strongly Agree</th>
+                                <th>N/A</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Work orders are completed in a timely manner</td>
+                                <td><input type="radio" name="fac_workorder" value="1"></td>
+                                <td><input type="radio" name="fac_workorder" value="2"></td>
+                                <td><input type="radio" name="fac_workorder" value="3"></td>
+                                <td><input type="radio" name="fac_workorder" value="4"></td>
+                                <td><input type="radio" name="fac_workorder" value="5"></td>
+                                <td><input type="radio" name="fac_workorder" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Buildings are well-maintained and clean</td>
+                                <td><input type="radio" name="fac_clean" value="1"></td>
+                                <td><input type="radio" name="fac_clean" value="2"></td>
+                                <td><input type="radio" name="fac_clean" value="3"></td>
+                                <td><input type="radio" name="fac_clean" value="4"></td>
+                                <td><input type="radio" name="fac_clean" value="5"></td>
+                                <td><input type="radio" name="fac_clean" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Campus grounds are well-kept and attractive</td>
+                                <td><input type="radio" name="fac_grounds" value="1"></td>
+                                <td><input type="radio" name="fac_grounds" value="2"></td>
+                                <td><input type="radio" name="fac_grounds" value="3"></td>
+                                <td><input type="radio" name="fac_grounds" value="4"></td>
+                                <td><input type="radio" name="fac_grounds" value="5"></td>
+                                <td><input type="radio" name="fac_grounds" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Staff responds promptly to emergency requests</td>
+                                <td><input type="radio" name="fac_emergency" value="1"></td>
+                                <td><input type="radio" name="fac_emergency" value="2"></td>
+                                <td><input type="radio" name="fac_emergency" value="3"></td>
+                                <td><input type="radio" name="fac_emergency" value="4"></td>
+                                <td><input type="radio" name="fac_emergency" value="5"></td>
+                                <td><input type="radio" name="fac_emergency" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>HVAC systems maintain comfortable temperatures</td>
+                                <td><input type="radio" name="fac_hvac" value="1"></td>
+                                <td><input type="radio" name="fac_hvac" value="2"></td>
+                                <td><input type="radio" name="fac_hvac" value="3"></td>
+                                <td><input type="radio" name="fac_hvac" value="4"></td>
+                                <td><input type="radio" name="fac_hvac" value="5"></td>
+                                <td><input type="radio" name="fac_hvac" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Event setup and support is satisfactory</td>
+                                <td><input type="radio" name="fac_events" value="1"></td>
+                                <td><input type="radio" name="fac_events" value="2"></td>
+                                <td><input type="radio" name="fac_events" value="3"></td>
+                                <td><input type="radio" name="fac_events" value="4"></td>
+                                <td><input type="radio" name="fac_events" value="5"></td>
+                                <td><input type="radio" name="fac_events" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Communication about service disruptions is adequate</td>
+                                <td><input type="radio" name="fac_communication" value="1"></td>
+                                <td><input type="radio" name="fac_communication" value="2"></td>
+                                <td><input type="radio" name="fac_communication" value="3"></td>
+                                <td><input type="radio" name="fac_communication" value="4"></td>
+                                <td><input type="radio" name="fac_communication" value="5"></td>
+                                <td><input type="radio" name="fac_communication" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Safety concerns are addressed appropriately</td>
+                                <td><input type="radio" name="fac_safety" value="1"></td>
+                                <td><input type="radio" name="fac_safety" value="2"></td>
+                                <td><input type="radio" name="fac_safety" value="3"></td>
+                                <td><input type="radio" name="fac_safety" value="4"></td>
+                                <td><input type="radio" name="fac_safety" value="5"></td>
+                                <td><input type="radio" name="fac_safety" value="na"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="form-group" style="margin-top: 25px;">
+                    <label for="fac_comments">Additional comments or suggestions for Facilities Management:</label>
+                    <textarea id="fac_comments" name="fac_comments" placeholder="Please share any specific feedback, concerns, or suggestions..."></textarea>
+                </div>
+            </section>
+
+            <!-- Section 6: Financial Aid -->
+            <section class="form-section">
+                <div class="section-header">
+                    <h2>Section 6: Financial Aid Assessment</h2>
+                    <p>Evaluate financial aid counseling, award processing, and student support services</p>
+                </div>
+
+                <div class="likert-scale">
+                    <p><strong>Please rate Financial Aid on the following criteria:</strong></p>
+                    <table class="likert-table">
+                        <thead>
+                            <tr>
+                                <th>Statement</th>
+                                <th>Strongly Disagree</th>
+                                <th>Disagree</th>
+                                <th>Neutral</th>
+                                <th>Agree</th>
+                                <th>Strongly Agree</th>
+                                <th>N/A</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Staff members are approachable and empathetic</td>
+                                <td><input type="radio" name="fin_approachable" value="1"></td>
+                                <td><input type="radio" name="fin_approachable" value="2"></td>
+                                <td><input type="radio" name="fin_approachable" value="3"></td>
+                                <td><input type="radio" name="fin_approachable" value="4"></td>
+                                <td><input type="radio" name="fin_approachable" value="5"></td>
+                                <td><input type="radio" name="fin_approachable" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Financial aid information is communicated clearly</td>
+                                <td><input type="radio" name="fin_clarity" value="1"></td>
+                                <td><input type="radio" name="fin_clarity" value="2"></td>
+                                <td><input type="radio" name="fin_clarity" value="3"></td>
+                                <td><input type="radio" name="fin_clarity" value="4"></td>
+                                <td><input type="radio" name="fin_clarity" value="5"></td>
+                                <td><input type="radio" name="fin_clarity" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Award packages are processed in a timely manner</td>
+                                <td><input type="radio" name="fin_timeliness" value="1"></td>
+                                <td><input type="radio" name="fin_timeliness" value="2"></td>
+                                <td><input type="radio" name="fin_timeliness" value="3"></td>
+                                <td><input type="radio" name="fin_timeliness" value="4"></td>
+                                <td><input type="radio" name="fin_timeliness" value="5"></td>
+                                <td><input type="radio" name="fin_timeliness" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Staff demonstrates knowledge of federal/state aid programs</td>
+                                <td><input type="radio" name="fin_knowledge" value="1"></td>
+                                <td><input type="radio" name="fin_knowledge" value="2"></td>
+                                <td><input type="radio" name="fin_knowledge" value="3"></td>
+                                <td><input type="radio" name="fin_knowledge" value="4"></td>
+                                <td><input type="radio" name="fin_knowledge" value="5"></td>
+                                <td><input type="radio" name="fin_knowledge" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Appeals and special circumstances are handled fairly</td>
+                                <td><input type="radio" name="fin_appeals" value="1"></td>
+                                <td><input type="radio" name="fin_appeals" value="2"></td>
+                                <td><input type="radio" name="fin_appeals" value="3"></td>
+                                <td><input type="radio" name="fin_appeals" value="4"></td>
+                                <td><input type="radio" name="fin_appeals" value="5"></td>
+                                <td><input type="radio" name="fin_appeals" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Financial literacy resources are helpful</td>
+                                <td><input type="radio" name="fin_literacy" value="1"></td>
+                                <td><input type="radio" name="fin_literacy" value="2"></td>
+                                <td><input type="radio" name="fin_literacy" value="3"></td>
+                                <td><input type="radio" name="fin_literacy" value="4"></td>
+                                <td><input type="radio" name="fin_literacy" value="5"></td>
+                                <td><input type="radio" name="fin_literacy" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Office is accessible (hours, location, virtual options)</td>
+                                <td><input type="radio" name="fin_accessible" value="1"></td>
+                                <td><input type="radio" name="fin_accessible" value="2"></td>
+                                <td><input type="radio" name="fin_accessible" value="3"></td>
+                                <td><input type="radio" name="fin_accessible" value="4"></td>
+                                <td><input type="radio" name="fin_accessible" value="5"></td>
+                                <td><input type="radio" name="fin_accessible" value="na"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="form-group" style="margin-top: 25px;">
+                    <label for="fin_comments">Additional comments or suggestions for Financial Aid:</label>
+                    <textarea id="fin_comments" name="fin_comments" placeholder="Please share any specific feedback, concerns, or suggestions..."></textarea>
+                </div>
+            </section>
+
+            <!-- Section 7: Information Technology -->
+            <section class="form-section">
+                <div class="section-header">
+                    <h2>Section 7: Information Technology Assessment</h2>
+                    <p>Evaluate IT support, network services, software systems, and technology infrastructure</p>
+                </div>
+
+                <div class="likert-scale">
+                    <p><strong>Please rate Information Technology on the following criteria:</strong></p>
+                    <table class="likert-table">
+                        <thead>
+                            <tr>
+                                <th>Statement</th>
+                                <th>Strongly Disagree</th>
+                                <th>Disagree</th>
+                                <th>Neutral</th>
+                                <th>Agree</th>
+                                <th>Strongly Agree</th>
+                                <th>N/A</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Help desk support is responsive and helpful</td>
+                                <td><input type="radio" name="it_helpdesk" value="1"></td>
+                                <td><input type="radio" name="it_helpdesk" value="2"></td>
+                                <td><input type="radio" name="it_helpdesk" value="3"></td>
+                                <td><input type="radio" name="it_helpdesk" value="4"></td>
+                                <td><input type="radio" name="it_helpdesk" value="5"></td>
+                                <td><input type="radio" name="it_helpdesk" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Network connectivity is reliable</td>
+                                <td><input type="radio" name="it_network" value="1"></td>
+                                <td><input type="radio" name="it_network" value="2"></td>
+                                <td><input type="radio" name="it_network" value="3"></td>
+                                <td><input type="radio" name="it_network" value="4"></td>
+                                <td><input type="radio" name="it_network" value="5"></td>
+                                <td><input type="radio" name="it_network" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Campus Wi-Fi coverage is adequate</td>
+                                <td><input type="radio" name="it_wifi" value="1"></td>
+                                <td><input type="radio" name="it_wifi" value="2"></td>
+                                <td><input type="radio" name="it_wifi" value="3"></td>
+                                <td><input type="radio" name="it_wifi" value="4"></td>
+                                <td><input type="radio" name="it_wifi" value="5"></td>
+                                <td><input type="radio" name="it_wifi" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Software and systems meet my work needs</td>
+                                <td><input type="radio" name="it_software" value="1"></td>
+                                <td><input type="radio" name="it_software" value="2"></td>
+                                <td><input type="radio" name="it_software" value="3"></td>
+                                <td><input type="radio" name="it_software" value="4"></td>
+                                <td><input type="radio" name="it_software" value="5"></td>
+                                <td><input type="radio" name="it_software" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>IT security measures are appropriate</td>
+                                <td><input type="radio" name="it_security" value="1"></td>
+                                <td><input type="radio" name="it_security" value="2"></td>
+                                <td><input type="radio" name="it_security" value="3"></td>
+                                <td><input type="radio" name="it_security" value="4"></td>
+                                <td><input type="radio" name="it_security" value="5"></td>
+                                <td><input type="radio" name="it_security" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Technology training opportunities are sufficient</td>
+                                <td><input type="radio" name="it_training" value="1"></td>
+                                <td><input type="radio" name="it_training" value="2"></td>
+                                <td><input type="radio" name="it_training" value="3"></td>
+                                <td><input type="radio" name="it_training" value="4"></td>
+                                <td><input type="radio" name="it_training" value="5"></td>
+                                <td><input type="radio" name="it_training" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Hardware (computers, printers) is well-maintained</td>
+                                <td><input type="radio" name="it_hardware" value="1"></td>
+                                <td><input type="radio" name="it_hardware" value="2"></td>
+                                <td><input type="radio" name="it_hardware" value="3"></td>
+                                <td><input type="radio" name="it_hardware" value="4"></td>
+                                <td><input type="radio" name="it_hardware" value="5"></td>
+                                <td><input type="radio" name="it_hardware" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Communication about system outages is timely</td>
+                                <td><input type="radio" name="it_outages" value="1"></td>
+                                <td><input type="radio" name="it_outages" value="2"></td>
+                                <td><input type="radio" name="it_outages" value="3"></td>
+                                <td><input type="radio" name="it_outages" value="4"></td>
+                                <td><input type="radio" name="it_outages" value="5"></td>
+                                <td><input type="radio" name="it_outages" value="na"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="form-group" style="margin-top: 25px;">
+                    <label for="it_comments">Additional comments or suggestions for Information Technology:</label>
+                    <textarea id="it_comments" name="it_comments" placeholder="Please share any specific feedback, concerns, or suggestions..."></textarea>
+                </div>
+            </section>
+
+            <!-- Section 8: Risk Management -->
+            <section class="form-section">
+                <div class="section-header">
+                    <h2>Section 8: Risk Management Assessment</h2>
+                    <p>Evaluate insurance, safety compliance, emergency preparedness, and risk mitigation services</p>
+                </div>
+
+                <div class="likert-scale">
+                    <p><strong>Please rate Risk Management on the following criteria:</strong></p>
+                    <table class="likert-table">
+                        <thead>
+                            <tr>
+                                <th>Statement</th>
+                                <th>Strongly Disagree</th>
+                                <th>Disagree</th>
+                                <th>Neutral</th>
+                                <th>Agree</th>
+                                <th>Strongly Agree</th>
+                                <th>N/A</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Staff provides clear guidance on risk-related policies</td>
+                                <td><input type="radio" name="risk_guidance" value="1"></td>
+                                <td><input type="radio" name="risk_guidance" value="2"></td>
+                                <td><input type="radio" name="risk_guidance" value="3"></td>
+                                <td><input type="radio" name="risk_guidance" value="4"></td>
+                                <td><input type="radio" name="risk_guidance" value="5"></td>
+                                <td><input type="radio" name="risk_guidance" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Insurance and liability information is accessible</td>
+                                <td><input type="radio" name="risk_insurance" value="1"></td>
+                                <td><input type="radio" name="risk_insurance" value="2"></td>
+                                <td><input type="radio" name="risk_insurance" value="3"></td>
+                                <td><input type="radio" name="risk_insurance" value="4"></td>
+                                <td><input type="radio" name="risk_insurance" value="5"></td>
+                                <td><input type="radio" name="risk_insurance" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Safety training is effective and relevant</td>
+                                <td><input type="radio" name="risk_safety" value="1"></td>
+                                <td><input type="radio" name="risk_safety" value="2"></td>
+                                <td><input type="radio" name="risk_safety" value="3"></td>
+                                <td><input type="radio" name="risk_safety" value="4"></td>
+                                <td><input type="radio" name="risk_safety" value="5"></td>
+                                <td><input type="radio" name="risk_safety" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Emergency procedures are well-communicated</td>
+                                <td><input type="radio" name="risk_emergency" value="1"></td>
+                                <td><input type="radio" name="risk_emergency" value="2"></td>
+                                <td><input type="radio" name="risk_emergency" value="3"></td>
+                                <td><input type="radio" name="risk_emergency" value="4"></td>
+                                <td><input type="radio" name="risk_emergency" value="5"></td>
+                                <td><input type="radio" name="risk_emergency" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Contract review process is efficient</td>
+                                <td><input type="radio" name="risk_contracts" value="1"></td>
+                                <td><input type="radio" name="risk_contracts" value="2"></td>
+                                <td><input type="radio" name="risk_contracts" value="3"></td>
+                                <td><input type="radio" name="risk_contracts" value="4"></td>
+                                <td><input type="radio" name="risk_contracts" value="5"></td>
+                                <td><input type="radio" name="risk_contracts" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Claims are processed in a reasonable timeframe</td>
+                                <td><input type="radio" name="risk_claims" value="1"></td>
+                                <td><input type="radio" name="risk_claims" value="2"></td>
+                                <td><input type="radio" name="risk_claims" value="3"></td>
+                                <td><input type="radio" name="risk_claims" value="4"></td>
+                                <td><input type="radio" name="risk_claims" value="5"></td>
+                                <td><input type="radio" name="risk_claims" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Compliance requirements are clearly explained</td>
+                                <td><input type="radio" name="risk_compliance" value="1"></td>
+                                <td><input type="radio" name="risk_compliance" value="2"></td>
+                                <td><input type="radio" name="risk_compliance" value="3"></td>
+                                <td><input type="radio" name="risk_compliance" value="4"></td>
+                                <td><input type="radio" name="risk_compliance" value="5"></td>
+                                <td><input type="radio" name="risk_compliance" value="na"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="form-group" style="margin-top: 25px;">
+                    <label for="risk_comments">Additional comments or suggestions for Risk Management:</label>
+                    <textarea id="risk_comments" name="risk_comments" placeholder="Please share any specific feedback, concerns, or suggestions..."></textarea>
+                </div>
+            </section>
+
+            <!-- Section 9: Student Accounts -->
+            <section class="form-section">
+                <div class="section-header">
+                    <h2>Section 9: Student Accounts Assessment</h2>
+                    <p>Evaluate billing, payment processing, account management, and student financial services</p>
+                </div>
+
+                <div class="likert-scale">
+                    <p><strong>Please rate Student Accounts on the following criteria:</strong></p>
+                    <table class="likert-table">
+                        <thead>
+                            <tr>
+                                <th>Statement</th>
+                                <th>Strongly Disagree</th>
+                                <th>Disagree</th>
+                                <th>Neutral</th>
+                                <th>Agree</th>
+                                <th>Strongly Agree</th>
+                                <th>N/A</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Staff members are patient and understanding</td>
+                                <td><input type="radio" name="sa_patience" value="1"></td>
+                                <td><input type="radio" name="sa_patience" value="2"></td>
+                                <td><input type="radio" name="sa_patience" value="3"></td>
+                                <td><input type="radio" name="sa_patience" value="4"></td>
+                                <td><input type="radio" name="sa_patience" value="5"></td>
+                                <td><input type="radio" name="sa_patience" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Billing statements are clear and accurate</td>
+                                <td><input type="radio" name="sa_billing" value="1"></td>
+                                <td><input type="radio" name="sa_billing" value="2"></td>
+                                <td><input type="radio" name="sa_billing" value="3"></td>
+                                <td><input type="radio" name="sa_billing" value="4"></td>
+                                <td><input type="radio" name="sa_billing" value="5"></td>
+                                <td><input type="radio" name="sa_billing" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Payment options are convenient and accessible</td>
+                                <td><input type="radio" name="sa_payment" value="1"></td>
+                                <td><input type="radio" name="sa_payment" value="2"></td>
+                                <td><input type="radio" name="sa_payment" value="3"></td>
+                                <td><input type="radio" name="sa_payment" value="4"></td>
+                                <td><input type="radio" name="sa_payment" value="5"></td>
+                                <td><input type="radio" name="sa_payment" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Payment plans are flexible and fair</td>
+                                <td><input type="radio" name="sa_plans" value="1"></td>
+                                <td><input type="radio" name="sa_plans" value="2"></td>
+                                <td><input type="radio" name="sa_plans" value="3"></td>
+                                <td><input type="radio" name="sa_plans" value="4"></td>
+                                <td><input type="radio" name="sa_plans" value="5"></td>
+                                <td><input type="radio" name="sa_plans" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Refunds are processed in a timely manner</td>
+                                <td><input type="radio" name="sa_refunds" value="1"></td>
+                                <td><input type="radio" name="sa_refunds" value="2"></td>
+                                <td><input type="radio" name="sa_refunds" value="3"></td>
+                                <td><input type="radio" name="sa_refunds" value="4"></td>
+                                <td><input type="radio" name="sa_refunds" value="5"></td>
+                                <td><input type="radio" name="sa_refunds" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Account inquiries are resolved satisfactorily</td>
+                                <td><input type="radio" name="sa_inquiries" value="1"></td>
+                                <td><input type="radio" name="sa_inquiries" value="2"></td>
+                                <td><input type="radio" name="sa_inquiries" value="3"></td>
+                                <td><input type="radio" name="sa_inquiries" value="4"></td>
+                                <td><input type="radio" name="sa_inquiries" value="5"></td>
+                                <td><input type="radio" name="sa_inquiries" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Online account portal is user-friendly</td>
+                                <td><input type="radio" name="sa_portal" value="1"></td>
+                                <td><input type="radio" name="sa_portal" value="2"></td>
+                                <td><input type="radio" name="sa_portal" value="3"></td>
+                                <td><input type="radio" name="sa_portal" value="4"></td>
+                                <td><input type="radio" name="sa_portal" value="5"></td>
+                                <td><input type="radio" name="sa_portal" value="na"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="form-group" style="margin-top: 25px;">
+                    <label for="sa_comments">Additional comments or suggestions for Student Accounts:</label>
+                    <textarea id="sa_comments" name="sa_comments" placeholder="Please share any specific feedback, concerns, or suggestions..."></textarea>
+                </div>
+            </section>
+
+            <!-- Section 10: Transportation & Fleet Management -->
+            <section class="form-section">
+                <div class="section-header">
+                    <h2>Section 10: Transportation &amp; Fleet Management Assessment</h2>
+                    <p>Evaluate vehicle services, transportation coordination, parking, and fleet operations</p>
+                </div>
+
+                <div class="likert-scale">
+                    <p><strong>Please rate Transportation &amp; Fleet Management on the following criteria:</strong></p>
+                    <table class="likert-table">
+                        <thead>
+                            <tr>
+                                <th>Statement</th>
+                                <th>Strongly Disagree</th>
+                                <th>Disagree</th>
+                                <th>Neutral</th>
+                                <th>Agree</th>
+                                <th>Strongly Agree</th>
+                                <th>N/A</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Vehicle reservation process is efficient</td>
+                                <td><input type="radio" name="trans_reservation" value="1"></td>
+                                <td><input type="radio" name="trans_reservation" value="2"></td>
+                                <td><input type="radio" name="trans_reservation" value="3"></td>
+                                <td><input type="radio" name="trans_reservation" value="4"></td>
+                                <td><input type="radio" name="trans_reservation" value="5"></td>
+                                <td><input type="radio" name="trans_reservation" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Vehicles are clean and well-maintained</td>
+                                <td><input type="radio" name="trans_condition" value="1"></td>
+                                <td><input type="radio" name="trans_condition" value="2"></td>
+                                <td><input type="radio" name="trans_condition" value="3"></td>
+                                <td><input type="radio" name="trans_condition" value="4"></td>
+                                <td><input type="radio" name="trans_condition" value="5"></td>
+                                <td><input type="radio" name="trans_condition" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Vehicle availability meets departmental needs</td>
+                                <td><input type="radio" name="trans_availability" value="1"></td>
+                                <td><input type="radio" name="trans_availability" value="2"></td>
+                                <td><input type="radio" name="trans_availability" value="3"></td>
+                                <td><input type="radio" name="trans_availability" value="4"></td>
+                                <td><input type="radio" name="trans_availability" value="5"></td>
+                                <td><input type="radio" name="trans_availability" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Staff is responsive to transportation requests</td>
+                                <td><input type="radio" name="trans_responsive" value="1"></td>
+                                <td><input type="radio" name="trans_responsive" value="2"></td>
+                                <td><input type="radio" name="trans_responsive" value="3"></td>
+                                <td><input type="radio" name="trans_responsive" value="4"></td>
+                                <td><input type="radio" name="trans_responsive" value="5"></td>
+                                <td><input type="radio" name="trans_responsive" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Parking services are adequate</td>
+                                <td><input type="radio" name="trans_parking" value="1"></td>
+                                <td><input type="radio" name="trans_parking" value="2"></td>
+                                <td><input type="radio" name="trans_parking" value="3"></td>
+                                <td><input type="radio" name="trans_parking" value="4"></td>
+                                <td><input type="radio" name="trans_parking" value="5"></td>
+                                <td><input type="radio" name="trans_parking" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Shuttle services (if applicable) are reliable</td>
+                                <td><input type="radio" name="trans_shuttle" value="1"></td>
+                                <td><input type="radio" name="trans_shuttle" value="2"></td>
+                                <td><input type="radio" name="trans_shuttle" value="3"></td>
+                                <td><input type="radio" name="trans_shuttle" value="4"></td>
+                                <td><input type="radio" name="trans_shuttle" value="5"></td>
+                                <td><input type="radio" name="trans_shuttle" value="na"></td>
+                            </tr>
+                            <tr>
+                                <td>Safety protocols are followed consistently</td>
+                                <td><input type="radio" name="trans_safety" value="1"></td>
+                                <td><input type="radio" name="trans_safety" value="2"></td>
+                                <td><input type="radio" name="trans_safety" value="3"></td>
+                                <td><input type="radio" name="trans_safety" value="4"></td>
+                                <td><input type="radio" name="trans_safety" value="5"></td>
+                                <td><input type="radio" name="trans_safety" value="na"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="form-group" style="margin-top: 25px;">
+                    <label for="trans_comments">Additional comments or suggestions for Transportation &amp; Fleet Management:</label>
+                    <textarea id="trans_comments" name="trans_comments" placeholder="Please share any specific feedback, concerns, or suggestions..."></textarea>
+                </div>
+            </section>
+
+            <!-- Section 11: Overall Assessment -->
+            <section class="form-section">
+                <div class="section-header">
+                    <h2>Section 11: Overall Division Assessment</h2>
+                    <p>Please provide your overall assessment of the Division of Business and Finance</p>
+                </div>
+
+                <div class="form-group">
+                    <label class="required">Overall, how satisfied are you with the Division of Business and Finance?</label>
+                    <div class="rating-group">
+                        <div class="rating-option">
+                            <input type="radio" id="overall_1" name="overall_satisfaction" value="1" required>
+                            <label for="overall_1">Very Dissatisfied</label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" id="overall_2" name="overall_satisfaction" value="2">
+                            <label for="overall_2">Dissatisfied</label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" id="overall_3" name="overall_satisfaction" value="3">
+                            <label for="overall_3">Neutral</label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" id="overall_4" name="overall_satisfaction" value="4">
+                            <label for="overall_4">Satisfied</label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" id="overall_5" name="overall_satisfaction" value="5">
+                            <label for="overall_5">Very Satisfied</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Which department has provided you with the BEST service? (Select one)</label>
+                    <select name="best_department">
+                        <option value="">-- Select department --</option>
+                        <option value="auxiliary">Auxiliary Services</option>
+                        <option value="business">Business Office</option>
+                        <option value="facilities">Facilities Management</option>
+                        <option value="financial">Financial Aid</option>
+                        <option value="it">Information Technology</option>
+                        <option value="risk">Risk Management</option>
+                        <option value="student">Student Accounts</option>
+                        <option value="transport">Transportation &amp; Fleet Management</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Which department has the MOST room for improvement? (Select one)</label>
+                    <select name="improvement_department">
+                        <option value="">-- Select department --</option>
+                        <option value="auxiliary">Auxiliary Services</option>
+                        <option value="business">Business Office</option>
+                        <option value="facilities">Facilities Management</option>
+                        <option value="financial">Financial Aid</option>
+                        <option value="it">Information Technology</option>
+                        <option value="risk">Risk Management</option>
+                        <option value="student">Student Accounts</option>
+                        <option value="transport">Transportation &amp; Fleet Management</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>What are the Division's greatest strengths?</label>
+                    <textarea name="strengths" placeholder="Please describe what the Division does well..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>What areas need the most improvement?</label>
+                    <textarea name="improvements" placeholder="Please describe areas where you would like to see improvement..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Do you have any suggestions for new services or process improvements?</label>
+                    <textarea name="suggestions" placeholder="Please share your ideas and suggestions..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Any additional comments or feedback?</label>
+                    <textarea name="additional_comments" placeholder="Please share any other thoughts you would like us to know..."></textarea>
+                </div>
+            </section>
+
+            <!-- Section 12: Contact Information (Optional) -->
+            <section class="form-section">
+                <div class="section-header">
+                    <h2>Section 12: Contact Information (Optional)</h2>
+                    <p>Provide your contact details if you would like us to follow up on your feedback</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact_name">Name</label>
+                    <input type="text" id="contact_name" name="contact_name" placeholder="Your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="contact_email">Email Address</label>
+                    <input type="email" id="contact_email" name="contact_email" placeholder="your.email@wileyc.edu">
+                </div>
+
+                <div class="form-group">
+                    <label for="contact_phone">Phone Number</label>
+                    <input type="text" id="contact_phone" name="contact_phone" placeholder="(XXX) XXX-XXXX">
+                </div>
+
+                <div class="form-group">
+                    <label>Would you be willing to participate in a follow-up discussion about your feedback?</label>
+                    <div class="rating-group">
+                        <div class="rating-option">
+                            <input type="radio" id="followup_yes" name="followup" value="yes">
+                            <label for="followup_yes">Yes</label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" id="followup_no" name="followup" value="no">
+                            <label for="followup_no">No</label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" id="followup_maybe" name="followup" value="maybe">
+                            <label for="followup_maybe">Maybe</label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Submit Section -->
+            <div class="submit-section">
+                <button type="submit" class="submit-btn">Submit Survey</button>
+                <p class="submit-note">Thank you for taking the time to complete this assessment. Your feedback is invaluable in helping us improve our services to the Wiley University community.</p>
+            </div>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <p class="tagline">Go Forth Inspired.</p>
+        <p>Wiley University | Division of Business and Finance</p>
+        <p>711 Wiley Avenue, Marshall, Texas 75670</p>
+        <p style="margin-top: 15px; font-size: 12px;">&copy; 2024 Wiley University. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // *** GOOGLE SHEETS CONFIGURATION ***
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxG7CA40mQmruKQ65DJDO5SibuRXmDtgwrVihWMODAiyujVTk03HyOF3-gGuUhQ177OhA/exec';
+
+        // Auto-set today's date
+        document.getElementById('surveyDate').valueAsDate = new Date();
+
+        // Progress bar functionality
+        const form = document.getElementById('assessmentSurvey');
+        const progressFill = document.getElementById('progressFill');
+        const sections = form.querySelectorAll('.form-section');
+
+        function updateProgress() {
+            const inputs = form.querySelectorAll('input, select, textarea');
+            let filled = 0;
+            let total = 0;
+
+            inputs.forEach(input => {
+                if (input.type === 'radio') {
+                    const name = input.name;
+                    if (!document.querySelector(`input[name="${name}"]:checked`)) {
+                        total++;
+                    } else {
+                        total++;
+                        filled++;
+                    }
+                } else if (input.type === 'checkbox') {
+                    // Skip checkboxes for progress
+                } else if (input.value.trim() !== '') {
+                    filled++;
+                    total++;
+                } else {
+                    total++;
+                }
+            });
+
+            // Simplified progress calculation
+            const radioGroups = {};
+            form.querySelectorAll('input[type="radio"]').forEach(radio => {
+                radioGroups[radio.name] = true;
+            });
+
+            let radioFilled = 0;
+            Object.keys(radioGroups).forEach(name => {
+                if (document.querySelector(`input[name="${name}"]:checked`)) {
+                    radioFilled++;
+                }
+            });
+
+            const textInputs = form.querySelectorAll('input[type="text"], input[type="email"], input[type="date"], select, textarea');
+            let textFilled = 0;
+            textInputs.forEach(input => {
+                if (input.value.trim() !== '') {
+                    textFilled++;
+                }
+            });
+
+            const totalItems = Object.keys(radioGroups).length + textInputs.length;
+            const filledItems = radioFilled + textFilled;
+            const percentage = Math.round((filledItems / totalItems) * 100);
+
+            progressFill.style.width = percentage + '%';
+        }
+
+        form.addEventListener('change', updateProgress);
+        form.addEventListener('input', updateProgress);
+
+        // Form submission to Google Sheets
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Disable submit button and show loading state
+            const submitBtn = form.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+            submitBtn.style.opacity = '0.6';
+
+            // Collect all form data
+            const formData = new FormData(form);
+            const data = {};
+
+            // Handle all inputs
+            for (let [key, value] of formData.entries()) {
+                if (key === 'departments') {
+                    // Collect all checked departments
+                    if (!data.departments) {
+                        data.departments = [];
+                    }
+                    data.departments.push(value);
+                } else {
+                    data[key] = value;
+                }
+            }
+
+            // Convert departments array to comma-separated string
+            if (data.departments && Array.isArray(data.departments)) {
+                data.departments = data.departments.join(', ');
+            }
+
+            // Send to Google Sheets
+            fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            })
+            .then(() => {
+                // Success (note: no-cors mode won't return response data)
+                alert('✅ Thank you for completing the Division of Business and Finance Assessment Survey!\n\nYour responses have been successfully recorded.');
+                form.reset();
+                updateProgress();
+                window.scrollTo(0, 0);
+            })
+            .catch((error) => {
+                // Error
+                alert('❌ There was an error submitting your survey. Please try again or contact the Division of Business and Finance for assistance.');
+                console.error('Submission error:', error);
+            })
+            .finally(() => {
+                // Re-enable button
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+                submitBtn.style.opacity = '1';
+            });
+        });
+
+        // Initial progress update
+        updateProgress();
+    </script>
+</body>
+</html>
