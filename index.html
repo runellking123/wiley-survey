@@ -1534,9 +1534,6 @@
             <!-- Submit Section -->
             <div class="submit-section">
                 <button type="submit" class="submit-btn">Submit Survey</button>
-            <!-- Submit Section -->
-            <div class="submit-section">
-                <button type="submit" class="submit-btn" id="submitBtn">Submit Survey</button>
                 <p class="submit-note">Thank you for taking the time to complete this assessment. Your feedback is invaluable in helping us improve our services to the Wiley University community.</p>
             </div>
         </form>
@@ -1550,56 +1547,144 @@
     </footer>
 
     <script>
+        // *** GOOGLE SHEETS CONFIGURATION ***
         const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxG7CA40mQmruKQ65DJDO5SibuRXmDtgwrVihWMODAiyujVTk03HyOF3-gGuUhQ177OhA/exec';
 
-        // Set today's date
+        // Wait for page to load
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Page loaded, initializing survey...');
+
+        // Auto-set today's date
         document.getElementById('surveyDate').valueAsDate = new Date();
 
-        // Simple form submission - same as working minimal survey
-        document.getElementById('assessmentSurvey').addEventListener('submit', function(e) {
+        // Progress bar functionality
+        const form = document.getElementById('assessmentSurvey');
+        const progressFill = document.getElementById('progressFill');
+        const sections = form.querySelectorAll('.form-section');
+
+        function updateProgress() {
+            const inputs = form.querySelectorAll('input, select, textarea');
+            let filled = 0;
+            let total = 0;
+
+            inputs.forEach(input => {
+                if (input.type === 'radio') {
+                    const name = input.name;
+                    if (!document.querySelector(`input[name="${name}"]:checked`)) {
+                        total++;
+                    } else {
+                        total++;
+                        filled++;
+                    }
+                } else if (input.type === 'checkbox') {
+                    // Skip checkboxes for progress
+                } else if (input.value.trim() !== '') {
+                    filled++;
+                    total++;
+                } else {
+                    total++;
+                }
+            });
+
+            // Simplified progress calculation
+            const radioGroups = {};
+            form.querySelectorAll('input[type="radio"]').forEach(radio => {
+                radioGroups[radio.name] = true;
+            });
+
+            let radioFilled = 0;
+            Object.keys(radioGroups).forEach(name => {
+                if (document.querySelector(`input[name="${name}"]:checked`)) {
+                    radioFilled++;
+                }
+            });
+
+            const textInputs = form.querySelectorAll('input[type="text"], input[type="email"], input[type="date"], select, textarea');
+            let textFilled = 0;
+            textInputs.forEach(input => {
+                if (input.value.trim() !== '') {
+                    textFilled++;
+                }
+            });
+
+            const totalItems = Object.keys(radioGroups).length + textInputs.length;
+            const filledItems = radioFilled + textFilled;
+            const percentage = Math.round((filledItems / totalItems) * 100);
+
+            progressFill.style.width = percentage + '%';
+        }
+
+        form.addEventListener('change', updateProgress);
+        form.addEventListener('input', updateProgress);
+
+        // Form submission to Google Sheets
+        form.addEventListener('submit', function(e) {
             e.preventDefault();
+            console.log('Form submit triggered!');
 
-            const submitBtn = document.getElementById('submitBtn');
-            submitBtn.textContent = 'Submitting...';
+            // Disable submit button and show loading state
+            const submitBtn = form.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
             submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+            submitBtn.style.opacity = '0.6';
 
-            const formData = new FormData(this);
+            // Collect all form data
+            const formData = new FormData(form);
             const data = {};
-            
+
+            // Handle all inputs
             for (let [key, value] of formData.entries()) {
                 if (key === 'departments') {
-                    if (!data.departments) data.departments = [];
+                    // Collect all checked departments
+                    if (!data.departments) {
+                        data.departments = [];
+                    }
                     data.departments.push(value);
                 } else {
                     data[key] = value;
                 }
             }
-            
+
+            // Convert departments array to comma-separated string
             if (data.departments && Array.isArray(data.departments)) {
                 data.departments = data.departments.join(', ');
             }
 
+            // Send to Google Sheets
             fetch(GOOGLE_SCRIPT_URL, {
                 method: 'POST',
                 mode: 'no-cors',
-                headers: { 'Content-Type': 'application/json' },
+                headers: {
+                    'Content-Type': 'application/json',
+                },
                 body: JSON.stringify(data)
             })
             .then(() => {
-                alert('✅ Thank you! Your responses have been recorded.');
-                this.reset();
-                document.getElementById('surveyDate').valueAsDate = new Date();
+                // Success (note: no-cors mode won't return response data)
+                alert('✅ Thank you for completing the Division of Business and Finance Assessment Survey!\n\nYour responses have been successfully recorded.');
+                form.reset();
+                updateProgress();
                 window.scrollTo(0, 0);
             })
             .catch((error) => {
-                alert('❌ Error submitting. Please try again.');
-                console.error(error);
+                // Error
+                alert('❌ There was an error submitting your survey. Please try again or contact the Division of Business and Finance for assistance.');
+                console.error('Submission error:', error);
             })
             .finally(() => {
-                submitBtn.textContent = 'Submit Survey';
+                // Re-enable button
                 submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+                submitBtn.style.opacity = '1';
             });
         });
+
+        // Initial progress update
+        updateProgress();
+
+        console.log('Survey initialized successfully!');
+        }); // End DOMContentLoaded
     </script>
 </body>
 </html>
