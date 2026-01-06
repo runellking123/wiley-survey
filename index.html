@@ -1616,6 +1616,7 @@
         // Form submission to Google Sheets
         form.addEventListener('submit', function(e) {
             e.preventDefault();
+            console.log('Form submit triggered!');
 
             // Disable submit button and show loading state
             const submitBtn = form.querySelector('.submit-btn');
