@@ -1550,6 +1550,10 @@
         // *** GOOGLE SHEETS CONFIGURATION ***
         const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxG7CA40mQmruKQ65DJDO5SibuRXmDtgwrVihWMODAiyujVTk03HyOF3-gGuUhQ177OhA/exec';
 
+        // Wait for page to load
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Page loaded, initializing survey...');
+
         // Auto-set today's date
         document.getElementById('surveyDate').valueAsDate = new Date();
 
@@ -1678,6 +1682,9 @@
 
         // Initial progress update
         updateProgress();
+
+        console.log('Survey initialized successfully!');
+        }); // End DOMContentLoaded
     </script>
 </body>
 </html>
